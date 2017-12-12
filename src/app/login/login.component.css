@@ -1,0 +1,21 @@
+.login-component{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% / 3);
+    max-width: 600px;
+    min-width: 300px;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.form-field-full-width{
+    width: 100%;
+}
+
+
+.login-card-actions-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}

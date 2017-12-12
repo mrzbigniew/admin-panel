@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app.routing.module';
 import { LoginModule } from './login/login.module';
 
 import { DashboardModule } from './dashboard/dashboard.module';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
     imports: [
         BrowserModule,
         AppRoutingModule,
         LoginModule,
-        DashboardModule
+        DashboardModule,
+        MaterialModule
     ],
     declarations: [
         AppComponent

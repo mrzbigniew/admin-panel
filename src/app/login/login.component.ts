@@ -17,22 +17,12 @@ export class LoginComponent {
     }
 
     login() {
-        this.authService.login(this.username, this.password).subscribe(() => {
-            if (this.authService.isLogged()) {
-                const url = this.authService.redirectUrl ? this.authService.redirectUrl : '/';
-                this.router.navigate([url]);
-            }
-            else {
-                this.message = "Nieprawidłowy login lub hasło";
-            }
-        });
+        this.authService.login(this.username, this.password);
+        this.router.navigate['/dashboard'];
     }
 
     logout() {
-        this.authService.logout().subscribe(() => {
-            if (!this.authService.isLogged()) {
-                this.router.navigate(['/login']);
-            }
-        });
+        this.authService.logout();
+        this.router.navigate(['/login']);
     }
 }
