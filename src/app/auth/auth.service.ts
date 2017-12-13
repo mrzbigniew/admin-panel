@@ -10,7 +10,7 @@ export class AuthService {
     redirectUrl: string;
 
     public isLogged(): boolean {
-        return !!+localStorage.getItem('logged');
+        return !!localStorage.getItem('logged');
     }
 
     constructor() {
@@ -19,12 +19,14 @@ export class AuthService {
 
     public login(username: string, password: string): boolean {
         //TODO
-        localStorage.setItem('logged', '1');
+        localStorage.setItem('logged', JSON.stringify({
+            username: username
+        }));
         return true;
     }
 
     public logout(): void {
         //TODO 
-        localStorage.setItem('logged', '0');
+        localStorage.removeItem('logged');
     }
 }

@@ -5,12 +5,15 @@ import { LoginRoutingModule } from './login.routing.module';
 import { AuthService } from '../auth/auth.service';
 import { AuthGuardService } from '../auth/auth-guard.service';
 import { MaterialModule } from '../material/material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
     imports: [
         CommonModule,
         LoginRoutingModule,
-        MaterialModule
+        MaterialModule,
+        FormsModule,
+        ReactiveFormsModule
     ],
     declarations: [
         LoginComponent
