@@ -20,7 +20,7 @@ export class LoginComponent {
     login() {
         console.log(this.username, this.password);
         if (this.authService.login(this.username, this.password)) {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/admin']);
         }
         else {
             this.loginError = true;
