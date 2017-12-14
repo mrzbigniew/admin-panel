@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 import { User } from '../user/models/User';
 import { UserService } from '../user/user.service';
+import { MenuDataLoaderService } from '../core/services/menu-data-loader.service';
 
 @Component({
     selector: 'my-dashboard',
@@ -44,11 +45,13 @@ export class DashboardComponent implements OnInit {
 
     user: Object;
 
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private menuService: MenuDataLoaderService) {
 
     }
 
     ngOnInit() {
         this.user = this.userService.getCurrentUser();
     }
-}
+
+
+} 

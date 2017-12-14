@@ -11,6 +11,7 @@ import { AuthModule } from '../auth/auth.module';
 
 import { ToolbarUserInfoComponent } from './toolbar-user-info.component';
 import { DashboardComponent } from './dashboard.component';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { DashboardComponent } from './dashboard.component';
         MaterialModule,
         BrowserAnimationsModule,
         MyMenuListModule,
-        AuthModule
+        AuthModule,
+        CoreModule
     ],
     declarations: [
         DashboardComponent,

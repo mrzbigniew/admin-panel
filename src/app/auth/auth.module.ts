@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
     imports: [
-        HttpModule
+        HttpClientModule
     ],
     exports: [
 
