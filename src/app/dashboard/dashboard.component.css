@@ -1,0 +1,18 @@
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.dashboard-sidenav-container{
+    flex: 1;
+}
+.dashboard-sidenav-nav-list{
+    min-width: 250px;
+    max-width: 250px;
+    width: 250px;
+}

@@ -1,0 +1,7 @@
+<mat-nav-list>
+    <my-menu-list-item *ngFor="let item of items" 
+        [item]="item" 
+        (click)="onMenuItemClick(item)"
+    >
+    </my-menu-list-item>             
+</mat-nav-list>
