@@ -5,6 +5,11 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
 
+interface User{
+    username: string;
+    name?: string;
+}
+
 @Injectable()
 export class AuthService {
     redirectUrl: string;
