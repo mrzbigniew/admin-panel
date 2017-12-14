@@ -1,0 +1,4 @@
+.toolbar-user-info{
+    display: flex;
+    flex-direction: row-reverse;
+}

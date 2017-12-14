@@ -1,0 +1,11 @@
+<div *ngIf="user">
+    <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>{{user.icon||'person'}}</mat-icon>
+        <span>{{user.name}}</span>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()">
+            Wyloguj
+        </button>
+    </mat-menu>
+</div>

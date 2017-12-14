@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
-// import { Http, Response } from '@angular/http';
+import { Http } from "@angular/http";
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
 
-interface User{
+
+interface User {
     username: string;
     name?: string;
 }
@@ -15,16 +16,16 @@ export class AuthService {
     redirectUrl: string;
 
     public isLogged(): boolean {
-        return !!localStorage.getItem('logged');
+        return !!localStorage.getItem('user');
     }
 
-    constructor() {
+    constructor(private http: Http) {
 
     }
 
     public login(username: string, password: string): boolean {
-        //TODO
-        localStorage.setItem('logged', JSON.stringify({
+        //TODO: 
+        localStorage.setItem('user', JSON.stringify({
             username: username
         }));
         return true;
@@ -32,6 +33,6 @@ export class AuthService {
 
     public logout(): void {
         //TODO 
-        localStorage.removeItem('logged');
+        localStorage.removeItem('user');
     }
 }

@@ -7,8 +7,7 @@ const routes: Routes = [
     {
         path: 'admin',
         component: DashboardComponent,
-        canActivate: [AuthGuardService],
-
+        canActivate: [AuthGuardService]
     }
 ];
 

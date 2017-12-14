@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard.component';
+
 
 import { DashboardRoutingModule } from './dashboard.routing.module';
 import { MaterialModule } from '../material/material.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyMenuListModule } from '../my-menu-list/my-menu-list.module';
 import { MyMenuListItemModule } from '../my-menu-list-item/my-menu-list-item.module';
+import { AuthModule } from '../auth/auth.module';
+
+import { ToolbarUserInfoComponent } from './toolbar-user-info.component';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
     imports: [
@@ -14,10 +18,12 @@ import { MyMenuListItemModule } from '../my-menu-list-item/my-menu-list-item.mod
         DashboardRoutingModule,
         MaterialModule,
         BrowserAnimationsModule,
-        MyMenuListModule
+        MyMenuListModule,
+        AuthModule
     ],
     declarations: [
-        DashboardComponent
+        DashboardComponent,
+        ToolbarUserInfoComponent
     ],
     providers: [
 
