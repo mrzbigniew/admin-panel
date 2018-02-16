@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -15,7 +15,7 @@ export class AuthService {
     }
 
     public login(username: string, password: string): boolean {
-        //TODO: 
+        // TODO:
         localStorage.setItem('user', JSON.stringify({
             username: username
         }));
@@ -23,7 +23,7 @@ export class AuthService {
     }
 
     public logout(): void {
-        //TODO 
+        // TODO
         localStorage.removeItem('user');
     }
 }

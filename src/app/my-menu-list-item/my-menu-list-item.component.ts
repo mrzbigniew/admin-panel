@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
         './my-menu-list-item.component.css'
     ]
 })
-export class MyMenuListItemComponent{
+export class MyMenuListItemComponent {
     @Input() item: Object;
 }

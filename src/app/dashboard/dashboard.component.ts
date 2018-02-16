@@ -52,6 +52,4 @@ export class DashboardComponent implements OnInit {
     ngOnInit() {
         this.user = this.userService.getCurrentUser();
     }
-
-
-} 
+}
